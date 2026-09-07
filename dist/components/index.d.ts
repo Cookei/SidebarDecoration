@@ -1,10 +1,10 @@
 import { QuartzComponent } from '@quartz-community/types';
 
-interface ExampleComponentOptions {
-    prefix?: string;
-    suffix?: string;
+interface SidebarDecorationComponentOptions {
+    lightSrc?: string;
+    darkSrc?: string;
     className?: string;
 }
-declare const _default: (opts?: ExampleComponentOptions) => QuartzComponent;
+declare const _default: (userOpts?: Partial<SidebarDecorationComponentOptions>) => QuartzComponent;
 
-export { _default as ExampleComponent, type ExampleComponentOptions };
+export { _default as SidebarDecorationComponent, type SidebarDecorationComponentOptions };

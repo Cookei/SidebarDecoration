@@ -1,15 +1,10 @@
 {
-  "name": "@quartz-community/plugin-template",
+  "name": "sidebar-decoration",
   "version": "0.1.0",
-  "description": "Template repository for Quartz community plugins.",
+  "description": "A decoration element on the sidebar",
   "type": "module",
   "license": "MIT",
-  "author": "Quartz Community",
-  "homepage": "https://quartz.jzhao.xyz",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/quartz-community/plugin-template"
-  },
+  "author": "Han Li",
   "keywords": [
     "quartz",
     "quartz-plugin",
@@ -97,29 +92,34 @@
     "@changesets/cli": "^2.29.0"
   },
   "quartz": {
-    "name": "plugin-template",
-    "displayName": "Plugin Template",
-    "category": "transformer",
+    "name": "sidebar-decoration",
+    "displayName": "Sidebar Decoration",
+    "category": "component",
     "version": "1.0.0",
     "quartzVersion": ">=5.0.0",
     "dependencies": [],
     "defaultOrder": 50,
     "defaultEnabled": true,
-    "defaultOptions": {},
+    "defaultOptions": {
+      "className": "sidebar-decoration",
+      "lightSrc": "/static/sidebar-decoration-image-light.png",
+      "darkSrc": "/static/sidebar-decoration-image-dark.png"
+    },
     "optionSchema": {
-      "highlightToken": {
-        "type": "enum",
-        "values": [
-          "==",
-          "**",
-          "~~"
-        ]
+      "className": {
+        "type": "string"
+      },
+      "lightSrc": {
+        "type": "string"
+      },
+      "darkSrc": {
+        "type": "string"
       }
     },
     "components": {
-      "ExampleComponent": {
-        "displayName": "Example Component",
-        "defaultPosition": "right",
+      "SidebarDecorationComponent": {
+        "displayName": "SidebarDecoration",
+        "defaultPosition": "left",
         "defaultPriority": 50
       }
     }
